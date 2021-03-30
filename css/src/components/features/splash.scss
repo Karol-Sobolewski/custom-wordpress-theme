@@ -1,0 +1,22 @@
+@import "../../settings.scss";
+
+.splash {
+  align-items: center;
+  background-color: $blue;
+  color: $white;
+  display: flex;
+  flex-direction: column;
+  height: 466px;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  &::after {
+    background-color: $magenta;
+    border-radius: 50%;
+    bottom: -16px;
+    content: "";
+    height: 32px;
+    position: absolute;
+    width: 32px;
+  }
+}

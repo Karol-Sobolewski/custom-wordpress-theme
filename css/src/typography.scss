@@ -1,0 +1,32 @@
+@import "./settings.scss";
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,700");
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-family: $font-title;
+}
+
+a {
+  color: $link;
+  font-family: $font-title;
+  text-decoration: none;
+  transition: $transition;
+}
+
+/* Media non-touch  */
+a:hover {
+  text-decoration: none;
+  color: $link-active;
+}
+/*Media touchable*/
+@media (pointer: coarse) {
+  a:active {
+    color: $link-active;
+    transition: 0s;
+  }
+}

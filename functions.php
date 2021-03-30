@@ -1,10 +1,18 @@
 <?php
 
-    function load_stylesheets() {
-        wp_register_style('bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css', array(), false, 'all');
-        wp_enqueue_style('bootstrap');
-        wp_enqueue_style( 'site_main_css', get_template_directory_uri() . '/css/build/main.min.css' );
-        wp_enqueue_script( 'site_main_js', get_template_directory_uri() . '/js/build/app.min.js' , null , null , true );
-    }
+if ( ! defined( 'DIR_PATH' ) ) {
+	define( 'DIR_PATH', untrailingslashit( get_template_directory() ) );
+}
 
-    add_action('wp_enqueue_scripts', 'load_stylesheets',);
+if ( ! defined( 'DIR_URI' ) ) {
+	define( 'DIR_URI', untrailingslashit( get_template_directory_uri() ) );
+}
+
+require_once DIR_PATH . '/inc/helpers/autoloader.php';
+
+
+function get_theme_instance() {
+    \KAROL_SOBOLEWSKI_THEME\Inc\KAROL_SOBOLEWSKI_THEME::get_instance();
+}
+
+get_theme_instance();
