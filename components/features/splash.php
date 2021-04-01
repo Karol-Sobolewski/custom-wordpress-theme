@@ -13,11 +13,11 @@
     <?php endif; ?>
     <div class="row carousel">
         <button type="button" id="backButton"><p><</p></button>
-        <div class="container">
+        <div class="container container__carousel">
             <div class="carousel__inner row">
                 <?php while($slides_post -> have_posts()) : $slides_post->the_post(); ?>        
-                    <div class="col-12 col-lg-4 post-column p-3">
-                        <div class="post">
+                    <div class="col-12 col-lg-4 slider-column p-3" id=<?php the_ID()?>>
+                        <div class="slider__post">
                             <h3 class="slide-title"><?php the_title(); ?></h3>
                             <div class="slide-content">
                                 <?php the_content() ?>

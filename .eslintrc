@@ -1,7 +1,4 @@
 {
-  "extends": [
-	"plugin:@wordpress/eslint-plugin/recommended"
-  ],
   "plugins": [
 	"jsdoc"
   ],
@@ -52,6 +49,17 @@
 	"no-undefined":"error",
 	"comma-spacing": ["error", { "before": false, "after": true }],
 	"lines-between-class-members": ["error", "always"],
+	"semi": [
+		"error",
+		"always"
+	  ],
+	  "quotes": [
+		"error",
+		"backtick",
+		{
+		  "allowTemplateLiterals": true
+		}
+	  ],
 	"arrow-spacing": "error",
 	"jsdoc/check-alignment": 1,
 	"jsdoc/check-param-names": 1,
