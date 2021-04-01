@@ -3,11 +3,11 @@
 namespace KAROL_SOBOLEWSKI_THEME\Inc;
 
 use KAROL_SOBOLEWSKI_THEME\Inc\Traits\Singleton;
+use WP_WIDGET;
 
 class KAROL_SOBOLEWSKI_THEME {
     use Singleton;
     protected function __construct(){
-        // wp_die( 'hello world' );
         $this->setup_hooks();
     }
 
@@ -15,6 +15,7 @@ class KAROL_SOBOLEWSKI_THEME {
         add_action('wp_enqueue_scripts', [$this, 'register_styles']);
         add_action('wp_enqueue_scripts', [$this, 'register_scripts']);
         add_action('after_setup_theme', [ $this, 'setup_theme']);
+        add_action( 'widgets_init', [$this, 'widgets_init' ]);
     }
 
     public function register_styles() {
@@ -35,5 +36,30 @@ class KAROL_SOBOLEWSKI_THEME {
             'flex-width' => true,
        ]);
     }
+    public function widgets_init() {
+
+		register_sidebar(
+			[
+                'name'          => 'Header Widget Area',
+                'id'            => 'header-widget',
+                'before_widget' => '<div class="header-widget">',
+                'after_widget'  => '</div>',
+                'before_title'  => '<h2 class="header-title">',
+                'after_title'   => '</h2>',
+			]
+		);
+
+        register_sidebar(
+			[
+                'name'          => 'Section Widget Area',
+                'id'            => 'section-widget',
+                'before_widget' => '<div class="section-widget">',
+                'after_widget'  => '</div>',
+                'before_title'  => '<h2 class="section-title">',
+                'after_title'   => '</h2>',
+			]
+		);
+    }
+
 }
 

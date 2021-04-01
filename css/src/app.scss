@@ -2,6 +2,8 @@
 @import "./typography";
 @import "./components/layout/header/navigation.scss";
 @import "./components/features/splash.scss";
+@import "./components/features/mainSection.scss";
+
 /*
 Theme Name: Karol Sobolewski Theme
 Author: Karol Sobolewski
@@ -26,7 +28,6 @@ body {
   box-sizing: border-box;
   color: $text-color;
   margin: 0;
-  overflow: hidden;
   padding: 0;
   width: 100%;
 }
