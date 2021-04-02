@@ -2,8 +2,8 @@
 
 .splash {
   align-items: center;
-  background-color: $blue;
-  color: $white;
+  background-color: $splash-bg;
+  color: $splash-heading-color;
   display: flex;
   flex-direction: column;
   height: 50vh;
@@ -11,7 +11,7 @@
   position: relative;
   width: 100%;
   &::after {
-    background-color: $magenta;
+    background-color: $splash-dot-color;
     border-radius: 50%;
     bottom: -16px;
     content: "";
@@ -44,7 +44,7 @@
       background: none;
       border-radius: 50%;
       border: none;
-      color: $cyan;
+      color: $splash-button-color;
       display: flex;
       font-size: 40px;
       height: 50px;
@@ -62,7 +62,7 @@
         transform: translate(0%, -50%);
       }
       &:hover {
-        background: rgba(255, 255, 255, 0.05);
+        background: $splash-button-bg-active;
       }
     }
     .carousel__inner {
@@ -78,21 +78,19 @@
         }
         .slider__post {
           align-items: center;
-          background: white;
-          color: $blackText;
+          background: $post-bg;
           display: flex;
           flex-direction: column;
           height: 100%;
           text-align: center;
           width: 100%;
           .slide-title {
+            color: $post-heading-color;
             width: 90%;
           }
           .slide-content {
             align-items: center;
-            background: white;
-            color: $blackText;
-            color: $grayText;
+            color: $post-text-color;
             display: flex;
             flex-direction: column;
             text-align: center;
