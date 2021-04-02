@@ -12,8 +12,8 @@
         <?php dynamic_sidebar( 'section-widget' ); ?>
         </div>
     <?php endif; ?>
-    <div class="container">
-        <div class="carousel row">
+    <div class="container d-flex align-items-center justify-content-center">
+        <div class="mainSection__row row">
             <?php while($section_post -> have_posts()) : $section_post->the_post(); ?>        
                 <div class="col-12 col-lg-4 post-column p-3">
                     <div class="post">

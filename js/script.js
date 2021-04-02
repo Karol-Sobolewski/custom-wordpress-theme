@@ -17,7 +17,6 @@
 		backButton.addEventListener( `click`, function () {
 			if ( 992 >= window.innerWidth ) {
 				if ( 2 <= left ) {
-					console.log( right );
 					left -= 1;
 					right -= 1;
 					allSlides.forEach( ( slide ) => {
